@@ -1,14 +1,16 @@
 import React from 'react';
-import './header.css';
+import './styles/header.css';
+import './styles/optionsColumn.css';
+import './styles/generic.css';
 
 const App = () => {
     return (
         <div>
 
             <header className="header-pdv">
-                <div className="grid-header grid-layout-1252">
+                <div className="grid-header">
                     <div className="logo-header">
-                        <img src="https://logospng.org/download/mercado-pago/logo-mercado-pago-icone-1024.png" alt="Logo-mercado" />
+                    <a href="http://localhost:3000/"><img src="https://logospng.org/download/mercado-pago/logo-mercado-pago-icone-1024.png" alt="Logo-mercado" /></a>
                     </div>
                     <div className="right-col-header">
                         <div className="about-header">
@@ -34,19 +36,26 @@ const App = () => {
             </header>
 
             <section>
-                <div className="grid-layout-1252">
-                    <div className="infos-header">
-                        <img src="https://cdn-icons-png.flaticon.com/512/15/15766.png" alt="Homepage" />
-                        <p>HOME</p>
+                <div className="left-column-options">
+                    <div className="home-option">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Homepage" />
+                        <p>Home</p>
                     </div>
-                    <div>
-                        <p>VENDAS</p>
+                    <div className="sell-option">
+                        <img src="https://image.flaticon.com/icons/png/512/126/126083.png" alt="Shopping" />
+                        <p>Vendas</p>
                     </div>
-                    <div>
-                        <p>PRODUTOS</p>
+                    <div className="customer-option">
+                        <img src="http://cdn.onlinewebfonts.com/svg/img_135335.png" alt="Shopping" />
+                        <p>Vendas</p>
                     </div>
-                    <div>
-                        <p>RELATÓRIOS</p>
+                    <div className="products-option">
+                    <img src="https://cdn-icons-png.flaticon.com/512/81/81960.png" alt="Shopping" />
+                        <p>Produtos</p>
+                    </div>
+                    <div className="reports-option">
+                    <img src="https://image.flaticon.com/icons/png/512/90/90417.png" alt="Shopping" />
+                        <p>Relatórios</p>
                     </div>
                 </div>
             </section>

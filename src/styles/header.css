@@ -5,11 +5,6 @@
   height: 85px;
 }
 
-.grid-layout-1252 {
-  max-width: 1252px;
-  margin: 0 auto;
-}
-
 .grid-header {
   display: flex;
   width: 100%;
@@ -25,8 +20,12 @@
   align-items: center;
 }
 
-.logo-header img {
-  height: 70px;
+.logo-header a {
+  display: flex;
+}
+
+.logo-header a img {
+  height: 80px;
   margin-left: 15px;
 }
 
@@ -60,12 +59,14 @@
   width: 30px;
   height: 30px;
   opacity: .6;
+  cursor: pointer;
 }
 
 .reload-header img {
   width: 35px;
   height: 35px;
   opacity: .6;
+  cursor: pointer;
 }
 
 .infos-header {
@@ -73,7 +74,7 @@
 }
 
 .infos-header p {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
 }
 
