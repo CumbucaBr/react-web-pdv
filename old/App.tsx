@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { ProductModel } from "./model/product.model";
 import { ProductsService } from "./services/products.service";
 import { PDVService } from "./services/pdv.service";
