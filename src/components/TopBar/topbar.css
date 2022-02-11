@@ -32,8 +32,38 @@ nenhuma alteração de css necessária por enquanto
 
 .navigation-list {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .navigation-item {
+  padding: 0 15px;
+  color: #ffffff;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
+.navigation-item:hover {
+  color: #1e73be;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navigation-item-arrow::after {
+  margin-left: 7px;
+  content: '⮟';
+  display: inline-block;
+  transform: rotate(180deg);
+
+}
+
+@keyframes rotationShow {
+  from {transform: rotateZ(180deg)}
+  to {transform: rotate(0deg)}
+}
+
+.navigation-item-arrow:hover::after {
+  animation: rotationShow .5s forwards
 }
