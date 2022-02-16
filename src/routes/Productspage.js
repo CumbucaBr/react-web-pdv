@@ -1,40 +1,33 @@
-import React from 'react';
-import ProductListItem from '../components/ProductCreation/ProductListItem';
+const Productspage = ({ productsList, setProducts }) => {
 
-const Productspage = ({createdProducts}) => {
-  const [products, setProducts] = React.useState(['']);
+  function updateProduct(event) {
+    // const productsCopy = Array.from(productsList);
+    // if (eventType === 'productName') {
+    //   productsCopy.splice(index, 1, { id: index, productName: eventValue, productPrice; });
 
-  React.useEffect(() => {
-    setProducts(createdProducts);
-  }, [createdProducts]);
-
-  // TODO CORRIGIR UPDATE
-  function updateProduct(event, index) {
-    const productsCopy = Array.from(products);
-    productsCopy.splice(index, 1, { id: index, value: event.target.value });
-    setProducts(productsCopy);
+    // }
+    // setProducts(productsCopy);
+    console.log(event)
   }
 
   function removeProduct(index) {
-    const productsCopy = Array.from(products);
+    const productsCopy = Array.from(productsList);
     productsCopy.splice(index, 1);
     setProducts(productsCopy);
   }
 
   return (
     <div>
-      {/* <pre>{JSON.stringify(products, null, 3)};</pre> */}
-      {products && products?.map((product, index) => {
-        return (
-          <ProductListItem
-            key={index}
-            productName={product.productName}
-            productValue={product.productPrice}
-            updateProductMethod={updateProduct}
-            removeProductMethod={removeProduct}
-          />
-        );
-      })}
+      {productsList.length > 0 &&
+        productsList?.map((product, index) => {
+          return (
+            <div>
+              <input name='productName' value={product.productName} onChange={(event) => {updateProduct(event );}} />
+              <input name='productvalue' value={product.productPrice} onChange={(event) => updateProduct(index, event.target.name, event.target.value )} />
+              <button onClick={() => removeProduct }>Remover Produto</button>
+            </div>
+          );
+        })}
     </div>
   );
 };

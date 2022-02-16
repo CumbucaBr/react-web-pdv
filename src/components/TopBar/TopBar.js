@@ -21,8 +21,8 @@ const TopBar = () => {
                 <li className="navigation-item">CRIAR PRODUTOS</li>
               </Link>
               <Link to="/registry" className="redirection-link">
-                <li className="navigation-item navigation-item-arrow">
-                  LOG IN
+              <li className="navigation-item navigation-item-arrow">
+                LOG IN
                 </li>
               </Link>
             </ul>
