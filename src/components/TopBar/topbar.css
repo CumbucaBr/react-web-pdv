@@ -24,6 +24,12 @@ nenhuma alteração de css necessária por enquanto
 .logo {
   width: 150px;
   filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+.logo:hover {
+  filter: invert(33%) sepia(90%) saturate(1030%) hue-rotate(184deg) brightness(88%) contrast(88%);
+  transition: all 0.2s ease;
 }
 
 .right-container-topbar {
@@ -66,4 +72,8 @@ nenhuma alteração de css necessária por enquanto
 
 .navigation-item-arrow:hover::after {
   animation: rotationShow .5s forwards
+}
+
+.redirection-link {
+  text-decoration: none;
 }
