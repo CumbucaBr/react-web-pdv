@@ -11,7 +11,7 @@ const CreateProductspage = ({ productsList, setProductsList }) => {
 
   function addNewProduct(name, price) {
     const productsCopy = Array.from(productsList);
-    const newProduct = { id: productsList.length, productName: name, productPrice: price };
+    const newProduct = { productName: name, productPrice: price };
     productsCopy.push(newProduct);
     setProductsList(productsCopy);
   }
