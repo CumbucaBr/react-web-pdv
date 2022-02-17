@@ -1,14 +1,19 @@
 import React from 'react';
 
-// Ao digitar as infos no input, ativa a função de setNewProduct que atualiza o Hook de novo produto.
-// Ao dar submit no formulário, ativa a função handleSubmit que joga o Hook de novo produto para dentro do método de AddNewItem (adicionar novo produto na array de Produtos)
-const NewProductInput = ({ addNewItem }) => {
+const CreateProductspage = ({ productsList, setProductsList }) => {
   const [newProductName, setNewProductName] = React.useState('');
   const [newProductPrice, setNewProductPrice] = React.useState('');
 
   function handleSubmit(event) {
     event.preventDefault();
-    addNewItem(newProductName, newProductPrice);
+    addNewProduct(newProductName, newProductPrice);
+  }
+
+  function addNewProduct(name, price) {
+    const productsCopy = Array.from(productsList);
+    const newProduct = { productName: name, productPrice: price };
+    productsCopy.push(newProduct);
+    setProductsList(productsCopy);
   }
 
   return (
@@ -18,8 +23,9 @@ const NewProductInput = ({ addNewItem }) => {
         <input onChange={(event) => setNewProductPrice(event.target.value)} />
         <button type="submit"> Adicionar Produto </button>
       </form>
+      <pre>{JSON.stringify(productsList, null, 3)};</pre>
     </div>
   );
 };
 
-export default NewProductInput;
+export default CreateProductspage;
