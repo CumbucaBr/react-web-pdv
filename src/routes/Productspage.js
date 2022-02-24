@@ -1,16 +1,9 @@
 const Productspage = ({ productsList, setProductsList }) => {
+  
   function updateProduct(index, inputName, value) {
     const productsCopy = Array.from(productsList);
-    if (inputName === 'productName')
-      productsCopy.splice(index, 1, {
-        productName: value,
-        productPrice: productsList[index].productPrice,
-      });
-    else
-      productsCopy.splice(index, 1, {
-        productName: productsList[index].productName,
-        productPrice: value,
-      });
+    if (inputName === 'productName') productsCopy.splice(index, 1, { productName: value, productPrice: productsList[index].productPrice, productImage: productsList[index].productImage });
+    else productsCopy.splice(index, 1, { productName: productsList[index].productName, productPrice: value, productImage: productsList[index].productImage });
     setProductsList(productsCopy);
   }
 
@@ -22,6 +15,7 @@ const Productspage = ({ productsList, setProductsList }) => {
 
   return (
     <div>
+      EDITAR OU APAGAR PRODUTOS
       {productsList.length > 0 &&
         productsList?.map((product, index) => {
           return (
@@ -34,16 +28,18 @@ const Productspage = ({ productsList, setProductsList }) => {
                 }}
               />
               <input
-                name="productvalue"
+                name="productValue"
                 value={product.productPrice}
                 onChange={(event) =>
                   updateProduct(index, event.target.name, event.target.value)
                 }
               />
+              <div>
+                <img src={product.productImage} alt="testimage" />
+              </div>
               <button onClick={(index) => removeProduct(index)}>
                 Remover Produto
               </button>
-              <pre>{JSON.stringify(productsList, null, 3)};</pre>
             </div>
           );
         })}
