@@ -15,3 +15,5 @@
 -> Feature para pesquisar produto na página separada
 
 -> Feature para cadastro de cliente e vendedor (localStorage)
+
+-> Pesquisar se já existe produto com nome igual antes de cadastrar
