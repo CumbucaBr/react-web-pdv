@@ -1,10 +1,16 @@
 # react-web-pdv
 
--> Criar CSS simples 
+-> Criar CSS simples (DONE)
 
--> Página separada para criar produto
+-> Página separada para criar produto   (DONE)
 
--> Página separada para mostrar produtos
+-> Página separada para mostrar produtos (DONE)
+
+-> Criar CSS simples para página de criação produto 
+
+-> Criar CSS simples para página de mostruário dos produtos
+
+-> Criar CSS simples para página de home
 
 -> Feature para pesquisar produto na página separada
 
